@@ -15,13 +15,11 @@ export const LayoutContainerInner = Styled.div`
     position: relative;
 `
 
-// max-width: 1400px;
-
 export default ({ children }) => {
     return (
         <LayoutContainer>
             <LayoutContainerInner>
-                { children }
+                {children}
             </LayoutContainerInner>
         </LayoutContainer>
     )

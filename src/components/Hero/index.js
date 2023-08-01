@@ -34,7 +34,7 @@ const NavContainer = Styled.div`
     top: 20px;
     left: 20px;
     right: 20px;
-    z-index: 1
+    z-index: 1;
     
 `
 
@@ -92,7 +92,7 @@ const HeroContainerPrimary = Styled.div`
     flex-direction: column;
     justify-content: center;
     height: 760px;
-        padding: 20px;
+    padding: 20px;
 `
 
 const HeroAnimaLogoContainer = Styled.div`
