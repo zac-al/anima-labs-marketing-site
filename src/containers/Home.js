@@ -1,11 +1,15 @@
 import React from "react";
-import styled from 'styled-components';
-import HeroSection from '../components/HeroSection';
+import Hero from '../components/Hero';
+import Overview from '../components/Overview';
+import Nexus from '../components/Nexus';
 
 export default () => {
     return (
-        <HeroSection>
-        </HeroSection>
+        <>
+            <Hero />
+            <Overview />
+            <Nexus />
+        </>
     )
 }
 

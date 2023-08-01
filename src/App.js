@@ -3,6 +3,8 @@ import './App.css';
 import { Routes, Route } from "react-router-dom"
 import { Home } from './containers'
 import "@fontsource/roboto-mono";
+import "@fontsource/inter"; 
+
 
 function App() {
   return (
