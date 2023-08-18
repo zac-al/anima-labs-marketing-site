@@ -1,54 +1,61 @@
 import React from 'react';
 import Styled from 'styled-components';
 import Nexus from "../../assets/images/nexus.svg";
+import NexusBackground from "../../assets/images/nexus-background.png";
 import Layout from "../Layout";
 
 
 const NexusContainer = Styled.div`
-    padding: 19px 40px 149px 40px;
+    padding: 113px 40px 43px 40px;
     width: 100%;
+    background-color: #1d1d1d;
     display: flex;
     flex-direction: column;
+    position: relative;
+    background-image: url(${NexusBackground});
+    background-repeat: no-repeat;
+    background-size: cover;
     align-items: center;
     img {
-        width: 986px;
+        max-width: 959px;
+        width: 100%;
      }
     p {
         color: #FFF;
         text-align: center;
         font-family: Inter;
-        font-size: 22.166px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
         margin: 0;
-        max-width: 640px;
+        max-width: 604px;
     }
     p:first-of-type {
         color: #FE5C00;
         text-align: center;
         font-family: Sequel100Black-65;
-        font-size: 31.061px;
-        line-height: 34.117px
+        font-size: 52px;
+        line-height: 52px
         font-style: normal;
         font-weight: 400;
-        margin: 28px 0 24px 0;
+        margin: 61px 0 12px 0;
     }
 
 `
 
 export default () => {
     return (
-        <Layout>
-            <NexusContainer>
+        <NexusContainer>
+
+
                 <img src={Nexus} />
                 <p>
                     Anima Nexus
                 </p>
                 <p>
-                    Anima’s Nexus: discover a vast library, seamless gameplay, and a thriving community.
+                   Discover a vast library, seamless gameplay, and a thriving <br /> community.
                 </p>
-            </NexusContainer>
-        </Layout>
+        </NexusContainer>
     )
 }

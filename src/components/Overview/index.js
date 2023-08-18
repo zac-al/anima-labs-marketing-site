@@ -1,6 +1,5 @@
 import React from 'react';
 import Styled from 'styled-components';
-import Layout from "../Layout";
 import Backpack from "../../assets/icons/backpack.svg"
 import Community from "../../assets/icons/community.svg"
 import Marketplace from "../../assets/icons/marketplace.svg"
@@ -11,19 +10,13 @@ import Wallet from "../../assets/icons/wallet.svg"
 const OLayout = Styled.div`
     display: flex;
     justify-content: center;
-    max-width: 1440px;
+    padding: 156px 40px;
+    background-color: #1d1d1d;
 `
 
-const OverviewLayoutOuter = Styled.div`
-    display: flex;
-    width: 100%;
-    padding: 131px 41px 131px 40px;
-    justify-content: flex-end;
-`
 
 const OverviewLayout = Styled.div`
-    max-width: 1250px;
-    width: 100%;
+    width: 1125px;
     display: flex;
     justify-content: space-between;
 `
@@ -32,29 +25,20 @@ const OverviewLayout = Styled.div`
 
 export default () => {
     return (
-        <Layout>
             <OLayout>
-                <OverviewLayoutOuter>
-                    <OverviewLayout>
-                        <OverviewTextSection />
-                        <AnimaFeaturesSection />
-                    </OverviewLayout>
-                </OverviewLayoutOuter>
+                <OverviewLayout>
+                    <OverviewTextSection />
+                    <AnimaFeaturesSection />
+                </OverviewLayout>
             </OLayout>
-        </Layout>
     )
 }
 
 const OverviewTextContainerOuter = Styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-`
-
-const OverviewTextContainer = Styled.div`
-    padding: 97px 0px 97px 0px;
-
 `
 
 const OverviewTextPrimary = Styled.p`
@@ -84,46 +68,49 @@ const OverviewTextSecondary = Styled.p`
 const OverviewTextSection = () => {
     return (
         <OverviewTextContainerOuter>
-            <OverviewTextContainer>
                 <OverviewTextPrimary>
                     The gaming <br />ecosystem of<br />the future
                 </OverviewTextPrimary>
                 <OverviewTextSecondary>
                     A gaming ecosystem and community, built for gamers, builders and modders. Play, create, earn, mod, trade
                 </OverviewTextSecondary>
-            </OverviewTextContainer>
         </OverviewTextContainerOuter>
     )
 }
 
 
 const AnimaFeaturesContainer = Styled.div`
-    flex-wrap: wrap;
-    max-width: 702px;
     display: flex;
-    justify-content: flex-end;
-    
+`
+
+const AnimaFeaturesContainerMargin = Styled(AnimaFeaturesContainer)`
+    margin-bottom: 18px;
 `
 
 
 const AnimaFeaturesSection = () => {
     return (
-        <AnimaFeaturesContainer>
-            <AnimaFeature text={'Backpack'} img={Backpack} />
-            <AnimaFeature text={'Wallet'} img={Wallet} />
-            <AnimaFeature text={'Social'} img={Wallet} />
-            <AnimaFeature text={'Gaming Studio'} img={Wallet} />
-            <AnimaFeature text={'Community'} img={Wallet} />
-            <AnimaFeature text={'Marketplace'} img={Wallet} />
-        </AnimaFeaturesContainer>
+        <div>
+            <AnimaFeaturesContainerMargin>
+                <AnimaFeature text={'Backpack'} img={Backpack} />
+                <AnimaFeature text={'Wallet'} img={Wallet} />
+                <AnimaFeature text={'Social'} img={Wallet} />
+            </AnimaFeaturesContainerMargin>
+            <AnimaFeaturesContainer>
+                <AnimaFeature text={'Gaming Studio'} img={Wallet} />
+                <AnimaFeature text={'Community'} img={Wallet} />
+                <AnimaFeature text={'Marketplace'} img={Wallet} />
+            </AnimaFeaturesContainer>
+        </div>
+
     )
 
 }
 
 const AnimaFeatureContainer = Styled.div`
-    width: 194px;
-    height: 194px;
-    margin-left: 40px;
+    width: 180px;
+    height: 180px;
+    margin-left: 26px;
     background: #161616;
     padding: 60px 0 25px 0;
     display: flex;

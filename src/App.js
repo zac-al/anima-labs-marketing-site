@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom"
 import { Home } from './containers'
 import "@fontsource/roboto-mono";
 import "@fontsource/inter"; 
+import "./fonts/Fontspring-DEMO-rocgrotesk-light.otf"
+import "./fonts/SF-Pro.ttf"
 
 
 function App() {
