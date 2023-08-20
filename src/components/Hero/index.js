@@ -31,39 +31,42 @@ const NavContainer = Styled.div`
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
+    top: 28px;
+    left: 43px;
+    right: 39px;
     z-index: 1;
     
 `
 
 const NavAnimaLogo = Styled.img`
-    height: 40px;
+    height: 34px;
 `
 
 const NavButtonContainer = Styled.div`
     display: flex;
     align-items: center;
-    div: first-of-type {
+    div:not(:last-child){
         margin-right: 18px;
     }
   
 `
 
 const NavButton = Styled.div`
-    background:url(${NavButtonOutline}); 
-    width: 130px;
-    height: 35px;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
+  display: flex;
+width: 109px;
+height: 27px;
+padding: 4px 9px;
+justify-content: center;
+align-items: center;
+border: 0.378px solid #D9D9D9;
+background: #1D1D1D;
     p {
-        color: #FFF;
-        font-family: Roboto Mono;
-        font-size: 14px;
-        font-weight: 500;
-        margin: 0 0 2.2px 0;
+        color: #FF8743;
+font-family: Roboto Mono;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 `
 
@@ -74,6 +77,11 @@ const Nav = () => {
             <NavButtonContainer>
                 <NavButton>
                     <p>
+                        WHITEPAPER
+                    </p>
+                </NavButton>
+                <NavButton>
+                    <p>
                         ABOUT
                     </p>
                 </NavButton>
@@ -82,6 +90,7 @@ const Nav = () => {
                         CONTACT
                     </p>
                 </NavButton>
+               
             </NavButtonContainer>
         </NavContainer>
     )
@@ -119,8 +128,8 @@ const AnimaLogoTextImage = Styled.img`
 const InitialisingAssetContainer = Styled.img`
     width: 252px;
     position: absolute;
-    bottom: 25px;
-    left: 20px;
+    bottom: 30px;
+    left: 43px;
 `
 
 const HeroSectionPrimary = () => {

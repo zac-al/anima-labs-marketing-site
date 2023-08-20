@@ -34,11 +34,10 @@ const NexusContainer = Styled.div`
     p:first-of-type {
         color: #FE5C00;
         text-align: center;
-        font-family: Sequel100Black-65;
-        font-size: 52px;
-        line-height: 52px
-        font-style: normal;
+        font-family: FONTSPRING DEMO - Roc Grotesk;
+        font-size: 47px;
         font-weight: 400;
+        line-height: 52px;
         margin: 61px 0 12px 0;
     }
 

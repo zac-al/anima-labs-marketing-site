@@ -26,26 +26,13 @@ const WalletLayoutInner = Styled.div`
 
 `
 
-// const WalletBackgroundImgContainer = Styled.div`
-
-//     background-size: cover;
-//     padding-right: 40px;
-//     width: 1034px;
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-// `
-
 
 export default () => {
     return (
         <WalletContainer>
-
             <WalletLayoutInner>
                 <WalletTextSection />
-                {/* <WalletBackgroundImgContainer> */}
                 <img src={WalletMockup} />
-                {/* </WalletBackgroundImgContainer> */}
             </WalletLayoutInner>
         </WalletContainer>
     )
