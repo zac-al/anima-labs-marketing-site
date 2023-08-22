@@ -2,7 +2,6 @@ import React from 'react';
 import Styled from 'styled-components';
 import Nexus from "../../assets/images/nexus.svg";
 import NexusBackground from "../../assets/images/nexus-background.png";
-import Layout from "../Layout";
 
 
 const NexusContainer = Styled.div`

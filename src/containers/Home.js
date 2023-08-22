@@ -6,6 +6,7 @@ import Community from "../components/Community";
 import Wallet from "../components/Wallet"
 import Backpack from "../components/Backpack";
 import Roadmap from "../components/Roadmap";
+import Contact from "../components/Contact";
 
 export default () => {
     return (
@@ -17,6 +18,7 @@ export default () => {
             <Wallet />
             <Backpack />
             <Roadmap />
+            <Contact />
         </>
     )
 }

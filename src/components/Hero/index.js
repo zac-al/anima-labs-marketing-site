@@ -2,10 +2,10 @@ import React from 'react';
 import Styled from 'styled-components';
 import Layout from "../Layout";
 import AnimaLogo from '../../assets/icons/anima-logo.svg';
-import NavButtonOutline from '../../assets/icons/nav-button-outline.svg';
 import AnimaLogoText from '../../assets/icons/anima-logo-text.svg';
 import InitialisingImage from '../../assets/images/initialising-image.svg';
 import HeroBackground from '../../assets/images/hero-background.png';
+import HeroData from '../../assets/images/hero-data.png';
 
 
 const HeronSectionContainer = Styled.div`
@@ -46,7 +46,7 @@ const NavButtonContainer = Styled.div`
     display: flex;
     align-items: center;
     div:not(:last-child){
-        margin-right: 18px;
+        margin-right: 7px;
     }
   
 `
@@ -132,6 +132,15 @@ const InitialisingAssetContainer = Styled.img`
     left: 43px;
 `
 
+const HeroDataImage = Styled.img`
+    height: 122px;
+    bottom: 34px;
+    position: absolute;
+    right: 39px;
+
+`
+
+
 const HeroSectionPrimary = () => {
     return (
         <HeroContainerPrimary>
@@ -140,6 +149,7 @@ const HeroSectionPrimary = () => {
                 <AnimaLogoTextImage src={AnimaLogoText} />
             </HeroAnimaLogoContainer>
             <InitialisingAssetContainer src={InitialisingImage} />
+            <HeroDataImage src={HeroData} />
         </HeroContainerPrimary>
     )
 }
@@ -163,3 +173,6 @@ const HeroSectionSecondary = () => {
         </HeroContainerSecondary>
     )
 }
+
+
+
