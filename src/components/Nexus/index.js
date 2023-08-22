@@ -15,6 +15,9 @@ const NexusContainer = Styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
+    @media (max-width: 960px) {
+        padding-top: 48px;
+    }
     img {
         max-width: 959px;
         width: 100%;
@@ -29,6 +32,10 @@ const NexusContainer = Styled.div`
         line-height: normal;
         margin: 0;
         max-width: 604px;
+        height: 60px;
+        @media (max-width: 960px) {
+            margin-top: 8px
+    }
     }
     p:first-of-type {
         color: #FE5C00;
@@ -37,7 +44,11 @@ const NexusContainer = Styled.div`
         font-size: 47px;
         font-weight: 400;
         line-height: 52px;
+        height: unset;
         margin: 61px 0 12px 0;
+        @media (max-width: 960px) {
+            margin-top: 37px;
+    }
     }
 
 `
