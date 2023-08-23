@@ -16,7 +16,7 @@ const OLayout = Styled.div`
     background-color: #1d1d1d;
     @media (max-width: 960px) {
         padding-top: 36px;
-        padding-bottom: 13px;
+        padding-bottom: 40px;
     }
 `
 
@@ -28,6 +28,7 @@ const OverviewLayout = Styled.div`
     @media (max-width: 960px) {
         flex-direction: column;
         align-items: center;
+        max-width: 720px;
     }
 `
 
@@ -104,7 +105,7 @@ const OverviewTextSection = () => {
                 An ecosystem and nexus between virtual worlds.
             </OverviewTextSecondary>
             <OverviewTextSecondaryBottomLine>
-            For gamers, builders and modders - create, earn, trade, destroy - you decide how to play.
+                For gamers, builders and modders - create, earn, trade, destroy - you decide how to play.
             </OverviewTextSecondaryBottomLine>
         </OverviewTextContainerOuter>
     )
@@ -123,24 +124,28 @@ const AnimaFeaturesContainerMargin = Styled(AnimaFeaturesContainer)`
     margin-bottom: 18px;
 `
 
+const AnimaFeaturesContainerOuter = Styled.div`
+  @media (max-width: 960px) {
+        max-width: 745px;
+    }
+`
 
 const AnimaFeaturesSection = () => {
     return (
-        <div>
+        <AnimaFeaturesContainerOuter>
             <AnimaFeaturesContainerMargin>
-                <AnimaFeature text={'Launcher'} img={Launcher} height={'70px'} paddingTop={'43px'} />
-                <AnimaFeature text={'Wallet'} img={Wallet} height={'52px'} paddingTop={"46px"} />
-                <AnimaFeature text={'Backpack'} img={Backpack} height={"67px"} paddingTop={"36px"} />
+                <AnimaFeature text={'Launcher'} img={Launcher} marginBottom={'14.6%'} marginTop={'24.5%'}  height={'70px'}  />
+                <AnimaFeature text={'Wallet'} img={Wallet} marginBottom={'23.6%'} marginTop={"25.5%"} height={'52px'} />
+                <AnimaFeature text={'Backpack'} img={Backpack} marginBottom={"18%"} marginTop={"20%"} height={"67px"}/>
             </AnimaFeaturesContainerMargin>
             <AnimaFeaturesContainer>
-                <AnimaFeature text={'Game Studio'} img={Gamepad} height={"96px"} paddingTop={"21px"} />
-                <AnimaFeature text={'Community'} img={Community} height={"74px"} paddingTop={"39px"}/>
-                <AnimaFeature text={'Marketplace'} img={Marketplace} height={"65px"} paddingTop={"40px"}/>
+                <AnimaFeature text={'Game Studio'} img={Gamepad} marginBottom={"13.7%"} marginTop={"11.6%"} height={"96px"}/>
+                <AnimaFeature text={'Community'} img={Community} marginBottom={"15.9%"} marginTop={"21.6%"}height={"74px"} />
+                <AnimaFeature text={'Marketplace'} img={Marketplace} marginBottom={"18.5%"} marginTop={"22.5%"} height={"65px"} />
             </AnimaFeaturesContainer>
-        </div>
+        </AnimaFeaturesContainerOuter >
 
     )
-
 }
 
 const AnimaFeatureContainer = Styled.div`
@@ -148,18 +153,23 @@ const AnimaFeatureContainer = Styled.div`
     height: 180px;
     margin-left: 26px;
     background: #161616;
-    padding: ${props => props.paddingTop} 0 25px 0;
+    /* padding: ${props => props.paddingTop} 0 0 0; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid rgba(255, 255, 255, 0.20);
     @media (max-width: 960px) {
-        max-width: 390px;
+        margin-left: 16px;
+        max-height: 230px;
+        max-width: 230px;
+        width: 29.5vw;
+        height: 29.5vw;
         ${props => props.text === "Launcher" && `
             margin-left: 0;
     `}
           ${props => props.text === 'Game Studio' && `
             margin-left: 0;
+            padding: 0;
     `}
 
     }
@@ -172,17 +182,39 @@ const AnimaFeatureContainer = Styled.div`
     font-weight: 400;
     line-height: 17.871px;
     margin: 0;
-    }
-    img {
-        height: ${props => props.height};
+    margin-bottom: 13%;
     }
 `
 
-const AnimaFeature = ({ img, text, height, paddingTop }) => {
+
+
+const AnimaFeatureImage = Styled.img`
+        height: ${props => props.height};
+        margin-top:  ${props => props.marginTop};
+        margin-bottom:  ${props => props.marginBottom};
+        display: flex;
+        flex: 1;
+        /* @media (max-width: 960px) { 
+            height: 50%;
+            // go based on indiviudal asset - use props
+            // work out proportional height and position based proprotionally */
+        /* } */
+`
+
+const AnimaFeature = ({ img, text, height, marginTop, marginBottom }) => {
     return (
-        <AnimaFeatureContainer text={text} paddingTop={paddingTop}>
-            <img src={img} height={height} />
-            <p>{text}</p>
-        </AnimaFeatureContainer>)
+        <div>
+            <AnimaFeatureContainer text={text}>
+                <AnimaFeatureImage src={img} height={height} marginTop={marginTop} marginBottom={marginBottom} />
+                <p>{text}</p>
+            </AnimaFeatureContainer>
+        </div>
+    )
 }
+
+
+
+
+
+
 

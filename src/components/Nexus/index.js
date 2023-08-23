@@ -16,10 +16,9 @@ const NexusContainer = Styled.div`
     background-size: cover;
     align-items: center;
     @media (max-width: 960px) {
-        padding-top: 48px;
+        padding: 48px 25px 43px 25px;
     }
     img {
-        max-width: 959px;
         width: 100%;
      }
     p {

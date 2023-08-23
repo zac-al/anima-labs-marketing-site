@@ -130,6 +130,8 @@ font-weight: 400;
 line-height: 24px;
 text-align: left;
 display: list-item;
+margin-top: 0;
+margin-bottom: 16px;
     }
 `
 

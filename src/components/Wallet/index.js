@@ -19,12 +19,32 @@ const WalletContainer = Styled.div`
     background-repeat: no-repeat;
     background-image: url(${WalletBackgroundImg});
 `
+
+// use clip path - it is the best solution
+
 const WalletLayoutInner = Styled.div`
     display: flex;
     width: 1127px;
     justify-content: space-between;
 
 `
+// const BackgroundImage = Styled.div`
+//     background-size: contain;
+//     background-position: 30vw 0px;
+//     background-repeat: no-repeat;
+//     background-image: url(${WalletBackgroundImg});
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     height: 821px;
+//     width: 100%;
+//     img {
+//         height: 656px;
+//         width: 303px;
+//     }
+// `
+
+
 
 
 export default () => {
