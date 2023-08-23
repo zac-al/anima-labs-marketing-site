@@ -21,8 +21,6 @@ const BackpackContainer = Styled.div`
         height: 649px;
         position: relative;
         right: 130px;
-        padding-right: 30px;
-
     }
 `
 const BackpackLayoutInner = Styled.div`
@@ -65,6 +63,7 @@ justify-content: flex-start;
 width: 100%;
 margin-top: 199px;
 position: relative;
+min-width: 436px;
     h2 {
         text-align: left;
         margin-top: 25px;
@@ -73,6 +72,7 @@ position: relative;
 
     @media (max-width: 960px) { 
         max-width: 500px;
+        min-width: unset;
         margin-top: 0;
         left: unset;
     }
@@ -89,7 +89,7 @@ const BackpackTextSection = () => {
                 Backpack
             </StyledSectionText>
             <StyledTextPrimary>
-            Carry your items seamlessly across virtual worlds and showcase your winnings and accomplishments in your public profile. <br/> <br/> One cross-chain backpack for all purposes.
+            Carry your items seamlessly across virtual worlds <br/> and showcase your winnings and accomplishments <br /> in your public profile. <br/> <br/> One cross-chain backpack for all purposes.
             </StyledTextPrimary>
         </BackpackTextSectionContainer>
     )
