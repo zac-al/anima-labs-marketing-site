@@ -135,7 +135,7 @@ const AnimaFeaturesSection = () => {
         <AnimaFeaturesContainerOuter>
             <AnimaFeaturesContainerMargin>
                 <AnimaFeature text={'Launcher'} img={Launcher} marginBottom={'14.6%'} marginTop={'24.5%'}  height={'70px'}  />
-                <AnimaFeature text={'Wallet'} img={Wallet} marginBottom={'23.6%'} marginTop={"25.5%"} height={'52px'} />
+                <AnimaFeature text={'Wallet'} img={Wallet} marginBottom={'22.6%'} marginTop={"26.5%"} height={'52px'} />
                 <AnimaFeature text={'Backpack'} img={Backpack} marginBottom={"18%"} marginTop={"20%"} height={"67px"}/>
             </AnimaFeaturesContainerMargin>
             <AnimaFeaturesContainer>

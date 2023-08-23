@@ -5,6 +5,7 @@ import AnimaLogo from '../../assets/icons/anima-logo.svg';
 import AnimaLogoText from '../../assets/icons/anima-logo-text.svg';
 import InitialisingImage from '../../assets/images/initialising-image.svg';
 import HeroBackground from '../../assets/images/hero-background.png';
+import MobileHeroBackground from '../../assets/images/mobile-hero-background.png';
 import HeroData from '../../assets/images/hero-data.png';
 
 
@@ -12,6 +13,9 @@ const HeronSectionContainer = Styled.div`
     display: flex;
     height: 800px;
     justify-content: space-between;
+    @media (max-width: 960px) {
+        height: 500px;
+}
 `
 
 export default () => {
@@ -22,10 +26,24 @@ export default () => {
                 <HeroSectionPrimary />
                 <HeroSectionSecondary />
             </HeronSectionContainer>
+            <MobileHeroBackgroundImage />
         </Layout>
     )
 
 }
+
+const MobileHeroBackgroundImage = Styled.div`
+display: none;
+background-repeat: no-repeat;
+background:url(${MobileHeroBackground}); 
+width: 100%;
+height: 500px;
+background-size: cover;
+@media (max-width: 960px) {
+    display: block;
+}
+
+`
 
 const NavContainer = Styled.div`
     display: flex;
@@ -90,7 +108,6 @@ const Nav = () => {
                         CONTACT
                     </p>
                 </NavButton>
-               
             </NavButtonContainer>
         </NavContainer>
     )
@@ -102,17 +119,22 @@ const HeroContainerPrimary = Styled.div`
     justify-content: center;
     height: 760px;
     padding: 20px;
+    @media(max-width: 960px) {
+        height: unset;
+    }
 `
 
 const HeroAnimaLogoContainer = Styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 35px;
-
     position: absolute;
     left: 0;
     z-index: 10;
     min-width: 50vw;
+    @media (max-width: 960px) {
+        width: 100vw;
+    }
 `
 
 
@@ -130,6 +152,9 @@ const InitialisingAssetContainer = Styled.img`
     position: absolute;
     bottom: 30px;
     left: 43px;
+    @media (max-width: 960px) {
+        bottom: 461.5px;
+    }
 `
 
 const HeroDataImage = Styled.img`
@@ -137,7 +162,6 @@ const HeroDataImage = Styled.img`
     bottom: 34px;
     position: absolute;
     right: 39px;
-
 `
 
 
@@ -159,6 +183,9 @@ background-repeat: no-repeat;
 background:url(${HeroBackground}); 
 width: 66.25vw;
 background-size: cover;
+@media (max-width: 960px) {
+    display: none;
+}
 
 `
 
