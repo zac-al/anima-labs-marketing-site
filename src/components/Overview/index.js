@@ -183,6 +183,9 @@ const AnimaFeatureContainer = Styled.div`
     line-height: 17.871px;
     margin: 0;
     margin-bottom: 13%;
+    @media (max-width: 960px) {
+        font-size: 18px;
+    }
     }
 `
 
@@ -194,11 +197,6 @@ const AnimaFeatureImage = Styled.img`
         margin-bottom:  ${props => props.marginBottom};
         display: flex;
         flex: 1;
-        /* @media (max-width: 960px) { 
-            height: 50%;
-            // go based on indiviudal asset - use props
-            // work out proportional height and position based proprotionally */
-        /* } */
 `
 
 const AnimaFeature = ({ img, text, height, marginTop, marginBottom }) => {
