@@ -10,7 +10,7 @@ const BackpackContainerOuter = Styled.div`
 const BackpackContainer = Styled.div`
     display: flex;
     justify-content: center;
-    padding: 101px 30px 72px 0px;
+    padding: 101px 0px 72px 0px;
     position: relative;
     right: 150px;
     @media (max-width: 960px) {
@@ -27,7 +27,7 @@ const BackpackContainer = Styled.div`
 `
 const BackpackLayoutInner = Styled.div`
     display: flex;
-    width: 1221px;
+    width: 1288px;
     justify-content: space-between;
     @media (max-width: 960px) {
         justify-content: center;
@@ -65,7 +65,6 @@ justify-content: flex-start;
 width: 100%;
 margin-top: 199px;
 position: relative;
-left: 67px;
     h2 {
         text-align: left;
         margin-top: 25px;
