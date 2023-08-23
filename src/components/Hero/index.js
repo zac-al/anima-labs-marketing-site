@@ -53,7 +53,9 @@ const NavContainer = Styled.div`
     left: 43px;
     right: 39px;
     z-index: 1;
-    
+    @media (max-width: 960px) {
+        display: none;
+    }
 `
 
 const NavAnimaLogo = Styled.img`
