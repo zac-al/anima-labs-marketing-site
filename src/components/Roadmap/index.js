@@ -58,8 +58,8 @@ const RoadmapContainer = Styled.div`
 `
 
 const RoadmapPhase = Styled.div`
-    height: 256px;
-    width: 316px;
+    min-height: 256px;
+    min-width: 316px;
     border-bottom: 1px solid rgba(82, 82, 82, 0.10);
     border-right: 1px solid #525252;
 `
