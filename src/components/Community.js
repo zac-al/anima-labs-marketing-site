@@ -54,7 +54,7 @@ margin-top: 112px;
             margin-top: 0;
             margin-bottom: 64px;
             max-width: unset;
-            width: max-content;
+            width: 500px;
             p {
                 max-width: 450px;
             }

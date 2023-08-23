@@ -2,6 +2,7 @@ import React from 'react';
 import Styled from 'styled-components';
 import WalletMockup from "../../assets/images/wallet-mockup.svg"
 import WalletBackgroundImg from "../../assets/images/wallet-background-img.png"
+import WalletBackgroundImgMobile from "../../assets/images/wallet-background-mobile.png"
 import { StyledSectionText, StyledSectionTextBox, StyledTextPrimary } from '../Typography';
 
 // turn these two into reusable in layout section - take props
@@ -18,6 +19,14 @@ const WalletContainer = Styled.div`
     background-position: 100% 0px;
     background-repeat: no-repeat;
     background-image: url(${WalletBackgroundImg});
+    @media (max-width: 960px) {
+        background-image: unset;
+        background-color: #181818;
+        padding-top: 51px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
 `
 
 // use clip path - it is the best solution
@@ -26,25 +35,34 @@ const WalletLayoutInner = Styled.div`
     display: flex;
     width: 1127px;
     justify-content: space-between;
+    @media (max-width: 960px) {
+            flex-direction: column;
+            align-items: center;
+    }
 
 `
 // const BackgroundImage = Styled.div`
 //     background-size: contain;
 //     background-position: 30vw 0px;
 //     background-repeat: no-repeat;
-//     background-image: url(${WalletBackgroundImg});
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-//     height: 821px;
+//     background-image: url(${WalletBackgroundImgMobile});
 //     width: 100%;
-//     img {
-//         height: 656px;
-//         width: 303px;
-//     }
+//   
 // `
 
 
+const WalletImageContainer = Styled.div`
+@media (max-width: 960px) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(${WalletBackgroundImgMobile});
+    width: 100%;
+    margin-top: 51px;
+    padding-top: 41px;
+    padding-bottom: 43px;
+}
+
+`
 
 
 export default () => {
@@ -52,7 +70,10 @@ export default () => {
         <WalletContainer>
             <WalletLayoutInner>
                 <WalletTextSection />
-                <img src={WalletMockup} />
+                <WalletImageContainer>
+               <img src={WalletMockup} />
+                </WalletImageContainer>
+ 
             </WalletLayoutInner>
         </WalletContainer>
     )
@@ -68,6 +89,10 @@ flex-direction: column;
 justify-content: flex-start;
 width: 100%;
 margin-top: 137px;
+@media (max-width: 960px) {
+    max-width: 500px;
+    margin-top: 0;
+}
     h2 {
         text-align: left;
         margin-top: 37px;
