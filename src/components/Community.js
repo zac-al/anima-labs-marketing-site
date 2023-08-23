@@ -6,14 +6,15 @@ import { StyledSectionText, StyledSectionTextBox, StyledTextPrimary } from './Ty
 const CommunityContainer = Styled.div`
     display: flex;
     justify-content: center;
-    padding: 101px 20px 72px 20px;
+    padding: 101px 25px 72px 25px;
     background-color: #1d1d1d;
     position: relative;
     @media (max-width: 960px) {
             padding-top: 51px;
     }
     img {
-        height: 649px;
+        max-width: 548px;
+    width: 100%;
         @media (max-width: 960px) {
             order: 2;
     }
@@ -21,7 +22,8 @@ const CommunityContainer = Styled.div`
 `
 const CommunityLayoutInner = Styled.div`
     display: flex;
-    width: 1146px;
+    max-width: 1146px;
+    width: 100%;
     justify-content: space-between;
     @media (max-width: 960px) {
         flex-direction: column;
@@ -53,8 +55,8 @@ margin-top: 112px;
             order: 1;
             margin-top: 0;
             margin-bottom: 64px;
-            max-width: unset;
-            width: 500px;
+            max-width: 500px;
+            width: 100%;
             p {
                 max-width: 450px;
             }
@@ -67,6 +69,13 @@ margin-top: 112px;
 
 `
 
+const StyledTextPrimaryCommunity = Styled(StyledTextPrimary)`
+    max-width: 400px;
+    @media (max-width: 960px) {
+        max-width: unset;
+    }
+`
+
 const CommunityTextSection = () => {
     return (
         <CommunityTextSectionContainer>
@@ -76,9 +85,9 @@ const CommunityTextSection = () => {
             <StyledSectionText>
                 Connect With Comrades
             </StyledSectionText>
-            <StyledTextPrimary>
+            <StyledTextPrimaryCommunity>
                 Community is the core of Anima: <br /> <br />End-to-end encrypted, cross-world communication tools, native DAO-based guilds and user-owned communities.
-            </StyledTextPrimary>
+            </StyledTextPrimaryCommunity>
         </CommunityTextSectionContainer>
     )
 }

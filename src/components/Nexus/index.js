@@ -20,6 +20,7 @@ const NexusContainer = Styled.div`
     }
     img {
         width: 100%;
+        max-width: 958px;
      }
     p {
         color: #FFF;

@@ -134,14 +134,14 @@ const AnimaFeaturesSection = () => {
     return (
         <AnimaFeaturesContainerOuter>
             <AnimaFeaturesContainerMargin>
-                <AnimaFeature text={'Launcher'} img={Launcher} marginBottom={'14.6%'} marginTop={'24.5%'}  height={'70px'}  />
-                <AnimaFeature text={'Wallet'} img={Wallet} marginBottom={'22.6%'} marginTop={"26.5%"} height={'52px'} />
-                <AnimaFeature text={'Backpack'} img={Backpack} marginBottom={"18%"} marginTop={"20%"} height={"67px"}/>
+                <AnimaFeature text={'Launcher'} img={Launcher} marginBottom={'14.6%'} marginTop={'24.5%'}  height={'39%'}  />
+                <AnimaFeature text={'Wallet'} img={Wallet} marginBottom={'22.6%'} marginTop={"26.5%"} height={'28.7'} />
+                <AnimaFeature text={'Backpack'} img={Backpack} marginBottom={"18%"} marginTop={"20%"} height={"34.4%"}/>
             </AnimaFeaturesContainerMargin>
             <AnimaFeaturesContainer>
-                <AnimaFeature text={'Game Studio'} img={Gamepad} marginBottom={"13.7%"} marginTop={"11.6%"} height={"96px"}/>
-                <AnimaFeature text={'Community'} img={Community} marginBottom={"15.9%"} marginTop={"21.6%"}height={"74px"} />
-                <AnimaFeature text={'Marketplace'} img={Marketplace} marginBottom={"18.5%"} marginTop={"22.5%"} height={"65px"} />
+                <AnimaFeature text={'Game Studio'} img={Gamepad} marginBottom={"13.7%"} marginTop={"11.6%"} height={"53.3%"}/>
+                <AnimaFeature text={'Community'} img={Community} marginBottom={"15.9%"} marginTop={"21.6%"}height={"41.1%"} />
+                <AnimaFeature text={'Marketplace'} img={Marketplace} marginBottom={"18.5%"} marginTop={"22.5%"} height={"37.8%"} />
             </AnimaFeaturesContainer>
         </AnimaFeaturesContainerOuter >
 

@@ -17,8 +17,8 @@ export default () => {
             <Community />
             <Wallet />
             <Backpack />
-            <Roadmap />
-            <Contact />
+            {/* <Roadmap /> */}
+            {/* <Contact /> */}
         </>
     )
 }

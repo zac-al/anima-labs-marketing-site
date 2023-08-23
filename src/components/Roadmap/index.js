@@ -27,7 +27,7 @@ const RoadmapSectionContainer = Styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: 58px;
-        margin-bottom: 4px;
+        margin-bottom: 12px;
     }
 `
 
@@ -36,7 +36,8 @@ font-size: 18px;
 font-style: normal;
 font-weight: 300;
 line-height: 22px;
-width: 639px;
+max-width: 639px;
+width: 100%;
 text-align: center;
 `
 
@@ -54,6 +55,9 @@ const RoadmapContainer = Styled.div`
     margin-top: 64px;
     display: flex;
     flex-direction: column;
+    @media (max-width: 960px) {
+        margin-top: 0;
+    }
     
 `
 
@@ -62,6 +66,9 @@ const RoadmapPhase = Styled.div`
     min-width: 316px;
     border-bottom: 1px solid rgba(82, 82, 82, 0.10);
     border-right: 1px solid #525252;
+    @media (max-width: 960px) {
+        display: none;
+    }
 `
 
 const PhaseContainer = Styled.div`
@@ -91,6 +98,7 @@ const PhaseLine = Styled.div`
 const RoadmapEventsContainer = Styled.div`
     padding-left: 80px;
     padding-top: 54px;
+  
 `
 
 const RoadmapStageNameContainer = Styled.div`
@@ -116,11 +124,26 @@ line-height: 36px;
  margin: 0 0 0 36px;
 
     }
+    @media (max-width: 960px) {
+        flex-direction: column;
+        align-items: flex-start;
+        p {
+            margin-left: 0;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            div {
+                gap: 0;
+            }
+        }
+    }
 `
 
 const EventsContainer = Styled.div`
     padding-top: 28px;
     padding-left: 80px;
+    @media (max-width: 960px) {
+        padding-left: 17px;
+    }
     p {
         color: #EBEBEB;
 font-family: SF Pro Text;
@@ -132,6 +155,9 @@ text-align: left;
 display: list-item;
 margin-top: 0;
 margin-bottom: 16px;
+    }
+    @media (max-width: 960px) {
+        padding-top: 0;
     }
 `
 

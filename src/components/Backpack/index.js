@@ -20,22 +20,27 @@ const BackpackContainer = Styled.div`
     img {
         height: 649px;
         position: relative;
-        right: 130px;
+        /* right: 130px; */
     }
 `
 const BackpackLayoutInner = Styled.div`
     display: flex;
-    width: 1288px;
+   min-width: 1288px;
     justify-content: space-between;
     @media (max-width: 960px) {
         justify-content: center;
             align-items: center;
-            width: unset;
+            min-width: unset;
+            width: 100%;
         flex-direction: column;
+        overflow: hidden;
+
         img {
             order: 2;
             padding-right: unset;
             padding-top: 60px;
+            position: relative;
+            right: 175px;
         }
     }
 
@@ -75,6 +80,7 @@ min-width: 436px;
         min-width: unset;
         margin-top: 0;
         left: unset;
+        padding: 0 20px;
     }
 
 `

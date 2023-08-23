@@ -89,9 +89,11 @@ flex-direction: column;
 justify-content: flex-start;
 width: 100%;
 margin-top: 137px;
+max-width: 410px;
 @media (max-width: 960px) {
     max-width: 500px;
     margin-top: 0;
+    padding: 0 25px;
 }
     h2 {
         text-align: left;
